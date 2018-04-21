@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -17,27 +19,80 @@
             <div class="col-12">
                 <div class="jumbotron">
                     <h1 class="display-4">Employee Data Management</h1>
-                    <h4 class="display-3">A Comprehensive Directory of Employee Billable Hours</h4>
+                    <h4>A Comprehensive Directory of Employee Billable Hours</h4>
                 </div>
             </div>
         </div>
     </div>
     <div class="container container-jumbotron2">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12">
                 <div class="jumbotron">
-                    <h1 class="display-4">Current </h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
-                        content or information.</p>
-                    <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    <h3 class="currentEmployees">Current Employees</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Employee Name</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">Months Worked</th>
+                                <th scope="col">Monthly Rate ($)</th>
+                                <th scope="col">Total Billed ($)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" id="inputEmployeeName"></th>
+                                <td id="inputRole"></td>
+                                <td id="inputStart"></td>
+                                <td id="inputWorked"></td>
+                                <td id="inputMonthlyRate"></td>
+                                <td id="returnBilled"></td>
+                            </tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
                     </p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="container container-jumbotron3">
+        <div class="row">
+            <div class="col-6">
+                <div class="jumbotron">
+                    <h1>Add Employee</h1>
+                    <hr>
+                    <form>
+                        <div class="form-group">
+                            <label for="employeeName">Employee Name</label>
+                            <input type="text" class="form-control" id="employeeName" placeholder="John Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRole">Role</label>
+                            <input type="text" class="form-control" id="inputRole" placeholder="CEO">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputStartDate">Start Date</label>
+                            <input type="text" class="form-control" id="inputStartDate" placeholder="DD/MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRate">Monthly Rate</label>
+                            <input type="text" class="form-control" id="inputRate">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
