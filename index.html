@@ -11,15 +11,17 @@
         crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 </head>
 
 <body>
     <div class="container container-jumbotron">
         <div class="row">
             <div class="col-12">
-                <div class="jumbotron">
-                    <h1 class="display-4">Employee Data Management</h1>
-                    <h4>A Comprehensive Directory of Employee Billable Hours</h4>
+                <div class="jumbotron" id="mainHeader">
+                    <h1 class="employeeHeader text-center">Employee Data Management</h1>
+                    <h4 class="employeeSubHeader text-center">A Comprehensive Directory of Employee Billable Hours</h4>
                 </div>
             </div>
         </div>
@@ -43,7 +45,7 @@
                         <tbody>
                             <tr>
                                 <th scope="row" id="inputEmployeeName"></th>
-                                <td id="inputRole"></td>
+                                <td id="role"></td>
                                 <td id="inputStart"></td>
                                 <td id="inputWorked"></td>
                                 <td id="inputMonthlyRate"></td>
@@ -61,8 +63,8 @@
     <div class="container container-jumbotron3">
         <div class="row">
             <div class="col-6">
-                <div class="jumbotron">
-                    <h1>Add Employee</h1>
+                <div class="jumbotron" id="addEmployees">
+                    <h3>Add Employee</h3>
                     <hr>
                     <form>
                         <div class="form-group">
@@ -82,7 +84,7 @@
                             <input type="text" class="form-control" id="inputRate">
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" id="addEmployee" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>

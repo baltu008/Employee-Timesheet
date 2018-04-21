@@ -1,8 +1,9 @@
-body {
-    margin: 0 auto;
+#mainHeader {
+    color: #fff;
+    background-color: black;
+    margin-top: 20px;
 }
 
-container-jumbotron {
-    text: #fff;
-    background-color: black;
+#addEmployees {
+    margin-bottom: 20px;
 }
